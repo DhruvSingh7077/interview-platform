@@ -1,5 +1,8 @@
+
+
+// export default App 
 import { useState } from 'react'
-import {SignInButton} from "@clerk/clerk-react"
+import {SignInButton, SignOutButton,SignedIn,SignedOut,UserButton} from "@clerk/clerk-react"
 import './App.css'
 
 function App() {
@@ -8,7 +11,16 @@ function App() {
   return (
     <>
      <h1>welcome to page</h1>
+
+     <SignedOut>
      <SignInButton  mode="modal"/>
+     </SignedOut>
+
+     <SignedIn>
+      <SignOutButton />
+     </SignedIn>
+
+     <UserButton />
     </>
   )
 }
