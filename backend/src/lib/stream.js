@@ -17,3 +17,12 @@ export const upsertStreamUser = async(userData) => {
         console.log("Error upserting stream user:",error)
     }
 }
+export const deleteStreamUser = async(userId) => {
+    try {
+        await chatClient.deleteUser(userId);
+        console.log("Stream user deleted successfully:", userId);
+        return userData
+    } catch (error) {
+        console.log("Error upserting stream user:",error)
+    }
+}
